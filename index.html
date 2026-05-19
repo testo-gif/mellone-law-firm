@@ -10,7 +10,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--navy:#1a2744;--gold:#c9a84c;--gold-light:#e8c96a;--cream:#faf8f3;--text:#2d3748}
-body{font-family:'Inter',sans-serif;color:var(--text);background:#fff}
+body{font-family:'Inter',sans-serif;color:var(--text);background:#fff;padding-top:40px}
 
 /* HERO */
 .hero{position:relative;height:100vh;min-height:580px;background:var(--navy);display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -85,9 +85,11 @@ nav.scrolled{background:var(--navy);box-shadow:0 2px 20px rgba(0,0,0,0.3)}
 .contact-value a{color:var(--gold);text-decoration:none}
 
 /* BANNER */
-.banner{background:linear-gradient(135deg,var(--navy),#2c3e6e);padding:80px 24px;text-align:center;color:#fff}
-.banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.6rem);font-weight:600;margin-bottom:16px}
-.banner p{color:rgba(255,255,255,0.7);margin-bottom:32px;font-size:16px}
+#buy-banner{position:fixed;top:0;left:0;width:100%;background:#000;color:#fff;z-index:9999;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+#buy-banner p{font-size:14px;margin:0}
+#buy-banner a.stripe{background:#ff4d00;color:#fff;text-decoration:none;padding:8px 18px;border-radius:4px;font-size:13px;font-weight:500;white-space:nowrap;flex-shrink:0}
+@media(max-width:600px){#buy-banner .dt{display:none}}
+@media(min-width:601px){#buy-banner .mob{display:none}}
 
 /* FOOTER */
 footer{background:#111827;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
@@ -123,7 +125,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-vPCR80-7Dz1J4H_VLtN5oTDMSN0z4TwKO6yWJrYGTVWkmA8OKpSyPGDE7z9wSrKu0fMWA0Z7Qxh32mmIZuO3dGAiW33L2LDUWfQ4zICHaBY6KzayfxT7qIDSXLKyW2HBs-oXAnnKQy10XEm8SkJ3vnbU9MBM5N-Q_7BU5bjrQxaq8ti9WTDL5HvJXUTF_zHVngBmGoAvVvP6mCWe_gx4lm3Ek6PV3r8y0E8u3zgGgn_Wpd6GkhCvRtnFTBRrd7uv55XFB2pcydZTjVJcFcp3OQhgDvYCTs29WyP1T_wutKbdLyVN4mVCLh4dLBATL1UFPg_KD7HpnRBXRFZGNu-PRioL5j9cDWRTZiKj1qLl12A4LPSEekYFG0mopk5QVYVPS3QjqoaWwitfABmB21-pHltTBrKu_afnLI3JoKoBkglzg&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Mellone Law Firm" style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
+  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-uk9LuAWVXxFttIX0q7A1uwTyGfuemlcGLQG6BTlMTXv3rC9gnSLn0xYjDrkTJEhqNrrPnsU4gwjhCOoF_lbAnJU2fIw2YQb78K3c5UKybXwWJnZipPQxB91FaLtcfkW2eNjmeLJQnNFVrxW9jpOqZUvrYku6S4baoOw5eooO4FfgpKuq67z410DXwKQ-l8dY6_9D7RQlDuotDdnldzERiI54ImfM3QiVbt0jpzF-0Q5lSMPIZCIDZ7C_w_mN1EEHPWeWL5MzwZQA1JCXkwtuf-ra2Bud5Jq4nltZ3iF3MmS1fWqCHzjr_bwGSth7AZYsMWZp1ApycB-ZGFXVeLYB-PEgCZ_7QR8qArupnDja-JI9udDisKO2S7g4FFFwWDDRAcvu3vdhTbqh0SdHrt-g0Bjk3YLkXN6roqFfY9Omm-A1E&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Mellone Law Firm" style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">Studio legale · Bologna</div>
@@ -150,7 +152,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
         </div>
       </div>
       <div class="about-img">
-        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-u8-c_5onIJdlY5uiAsOmdP21YSf0cpXRzybpAj3ftOZVI_2CfxoGZuW7kVsMbqGBtTredYeM2qMEo5pFl-rzT_3NNqbnChwNOM3D-ajdrt8xGGlYMp49qQQrYMpbc9o1zQ9TRs4JHcBizi4-sRbPkg6m5rkUZPmQlQkY9bPhiTTgKko6GvjYisLvyJaPLhN6ciEK-mVhtyietPPly7oYX8li3rtJ0whXrQqPLmTwoAZeUC_B0nLWrgV6RC9muXGfytH79zo7eypca5cHkagjt6wPWSmPOZY4itrE1FsL46tyO-vNsdNG4oQ1-t-R8ma51i8ThQGIuFSkDnjKwemMdTKVaEAFKpYcK31KGK6Gy0_Mc98Sw-AmJOPwHoYpEF7Pp_S-4On5f3rDsYQk597Z3MSpQLGgvqZNNZCFjRD0SbLwI6&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Mellone Law Firm">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-s3IMDbx4lBR7WK3u6YmUc9kNrdDZyjSJzYHtTaElXYShmXKUJx3YEiFJ62hjhykAmzDsg2oZ7usO-cIpN8ZJo--oM0-tJNcqueWA54m8rgitOXPkOfD_2oMe9vjAiniK8T7dvHSsWxT25f-6TVpRK_lh4qF45fWsFL-xcBp1OuGPyJa2V02VQnzrjV3Wg7K5XvhFZ32Dfm5Em4GEzV6A-J0flFa2dT2GzkpVF_no4ekCc-It6zBA4UBPckfQ0hYLGJ7kQb3iqJ3IoTvWEJqacDT3oS40CqgaNEWmFMOc8dFtD4eGspRLTgnZtz2g5s74nmMALMJ5GIhNPSX1vBjl2o8h_m2KJIO-wg2n81smhzL0q3-8ZY1Z-YlE1rEil3Kcf4_3kQ2e33S7BG5R2RA3q5VQhS4jlaTJmSvHDymoGLh8Kd&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Mellone Law Firm">
       </div>
     </div>
   </div>
@@ -160,7 +162,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
   <div class="container">
     <h2 class="section-title">Servizi offerti</h2>
     <div class="services-grid"><div class="service-item"><div class="service-icon">⚖</div><span>Consulenza legale</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Diritto civile</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Diritto del lavoro</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Diritto penale</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Recupero crediti</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Contrattualistica</span></div></div>
-    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-u8-c_5onIJdlY5uiAsOmdP21YSf0cpXRzybpAj3ftOZVI_2CfxoGZuW7kVsMbqGBtTredYeM2qMEo5pFl-rzT_3NNqbnChwNOM3D-ajdrt8xGGlYMp49qQQrYMpbc9o1zQ9TRs4JHcBizi4-sRbPkg6m5rkUZPmQlQkY9bPhiTTgKko6GvjYisLvyJaPLhN6ciEK-mVhtyietPPly7oYX8li3rtJ0whXrQqPLmTwoAZeUC_B0nLWrgV6RC9muXGfytH79zo7eypca5cHkagjt6wPWSmPOZY4itrE1FsL46tyO-vNsdNG4oQ1-t-R8ma51i8ThQGIuFSkDnjKwemMdTKVaEAFKpYcK31KGK6Gy0_Mc98Sw-AmJOPwHoYpEF7Pp_S-4On5f3rDsYQk597Z3MSpQLGgvqZNNZCFjRD0SbLwI6&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-trY-ldznTnDtexanCz8J7fLHnaL0dDEd42IdBTGR9KzlXcmlk6yPdS-MXZnml3waYxl8IpQoEyC85MNQ9OVBWU_PCHCVaTa5W4_8omq-wc616BZPg_otbjbdtIQ4aKKdo11qxJFWi584wkVt-y6TYfKqkQYN2yo6mrZUaG-BtIOzwdxeehN5yFL-4v3BrfMXFdZp6ITwyV4W1HY34lvM0pCNZATN39jnH73sx0uy-sTUtS-x-MrNqx6oF6Wrr1Q5uNLj4j2GiMbfDFC4kOe4-2JMcZUOdQUTB3_1xmP-BgeXtVxxEhijMpoylCZ3wBn8O2rJFzCMcpm56TMgNfp6YyWVobqJsTTDItwsZBPdagOrE8qPlY3m4uxiwnj6sgWZuZaF_MpYsMF7xW7uofPBOk64BoHoBjcjsEdmlDJp4&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-tUd3RIpwDb65R4zK9Qq8OXrBLG-Ke9wCCE1KA4QAZxI3cblx_y0Mw-7pEIyz2DWAdyIRaGCk6GRxzBK2QkJaHsf2SFMtLKm-5EE0GohmEJ-CS02R1Wrpvq6IAsU1Nm-Pk9CdxU_7wjfLg9ucR6oY33fSp_3dp2gR716Z2si4ZtFwLmsDCz8_d5K7kv3QgatN7clVK-q-dsgD1mYCK_kt0X3Ouz9r3O05af4u4lz8Rl3qF2FNiTvJtQMutotT1ZuLGa6HbsG9_QL1ST2vYy3knSxjuoijCAOMA0unVy91ImqCRc451ZCKZP02i10aHXtRveBo93X1hmkTP4mgiIsbqBSa-kL2U9umAQiYeCBFoJvkIyqpymZ8XOkxxNNnhX6CfdHXG_l6C47vgjMP7RMrEDP9jMuk9-SnJtjW0IqsmjWUo&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-s3VMHVRxyfvolWJoZuXnR2_w8rzER4G-uSMRFXrC0gDCALzcFRLwO_9dQ35kU-CSJCHB8Pc0w0N3sHujSQ4CfUUEKaEzZZE9f1Mf8UNYZijrZPArMSRR4Evu25X876TXRTLQaoI7XF1h-3c-xrn0BrwRgHyOTxnDGfuYWC6DyTO1h-ipL_EDcIP4TfWmsvAioD-BuoQgOJOX3RQ9XVfXItIs4svwdp2LmiVBKtxNKeH48i9uw-ExWB937q0LZ92DrxBnaQ7hT-FfxD4Pk8v0xT5Q4y3nJQ81cmkWfoHjEaGT0WLWam_2vYQsoII9svkOAmUq9wKgOJLwRAFraoD3pBPMt1WVU_Q7tpTLLs3biG7keDonF1csykGq9DzRgyoIEP9a7GDdCDJMeQEycrC6EPw-alDy3QQBNOXQi00OUQ4Q&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
+    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-s3IMDbx4lBR7WK3u6YmUc9kNrdDZyjSJzYHtTaElXYShmXKUJx3YEiFJ62hjhykAmzDsg2oZ7usO-cIpN8ZJo--oM0-tJNcqueWA54m8rgitOXPkOfD_2oMe9vjAiniK8T7dvHSsWxT25f-6TVpRK_lh4qF45fWsFL-xcBp1OuGPyJa2V02VQnzrjV3Wg7K5XvhFZ32Dfm5Em4GEzV6A-J0flFa2dT2GzkpVF_no4ekCc-It6zBA4UBPckfQ0hYLGJ7kQb3iqJ3IoTvWEJqacDT3oS40CqgaNEWmFMOc8dFtD4eGspRLTgnZtz2g5s74nmMALMJ5GIhNPSX1vBjl2o8h_m2KJIO-wg2n81smhzL0q3-8ZY1Z-YlE1rEil3Kcf4_3kQ2e33S7BG5R2RA3q5VQhS4jlaTJmSvHDymoGLh8Kd&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-uwzoYkCbvKibrLgC0MYI5aJ2Ubc5_cd46dtOFPkx0D7uBi9PNu6u2WDqfLuBXvSv86UZpW4f-0s0LYJdjKayfhFF7OgiCkfI9JrxJOpqW7aT1DujuA-290BA8xV1Ap0YJ8Zhqz3SHLX9hhtuL3g_7BiLorLEuUrjYTIh1w4mJvcrWXBXVt6ynkvhyq4qUzk6xnUaiG222j6ZgxxXwLhl4EdIEfwIM8Kb93CmRR3SFyy4o8lurgo9UQuyJTl1wdcr5iLRp1Phq4pUMXT668Mk7eCqRT0YQjejeeKwxXfgrrk9Lg2hJnUfEuX6s8HNOwmJwYOKGG7VX6Kwum3NSVdyD61sg67zv2zRUdt4Tbau1OVymRJmr3wrU4sAhzlHCGUFNY-BuubErCUNXFM0OLSvg5O9CVlbEHagOluYPufnA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-vLZpGbmQhunYg6ASFU0YaqIWjHjo6Suusdx_Nj3aX7ja3kuLTKxtd25L3bxXNSqqrcUowu3oCuS2LKKIMnKbEvu89sBrMwP2WVSh1ZZUdgAteQ0A_eqJ0BtyMD8-oBG47PunXnhbAL5revb5j_Dm179Lemrw4Is9SjsBqINHzBHaCmvq3dDu22aJQNhxTZFwblieELH_edJ6Elp6g8sUnZFojacGAnaC-G7NmJlaReeI7upFgQH6eSQPQfb66U7Bp0_oFfNpyAwsSGU9zbJQv2Ol6I4kbmCeQJMjS-QhT_Kb9x57Wrvb2E_FTUzhUsGo5ZQfUvQNxhvDvqrhttABQOSwmxhsJO84pd99LcbeVsxCK83KHfEdB8J2PfgTp8yR6xx8IBHtfYkZJoswAUpwi8Ph6prJRelckeKanVeXefmAY&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-vEmmTfPg_5t13xxTUJ6BqKa7W1r9gCUiMHzvtZVyr7IyjEfvg3dlvIpo7pRMpOBEAjOoNnQBH4vg1Ua7ydZRKxed4NXjTx2nNOi-P0HaAY78fZs5F957Gs1F_yGcV0JHYVv18OVj7yapiIhzNEr5Gyq7TQdggYgxOCFW6V6YZ1IJqJLl0RN4aVzO-sw6kkuFe0tKEmPl5ksHKpaZG4FcS6Im1OIsdVQO_0TD7wfyJfFDu-OQzSIzya2Dws8VLOuwyHnB08o5QP-Z1OxEn0Xzp26BDjMNTM6VJnF9sbiDleYQ8kDWgg7Jj4UFG99cHc1b9WyTnCi8xIFB2At-LyEbZuqk1NvjZ_XyLlYNo5SLmcsUKqNvpE2F4ALXUKlBDQsL59j1XrkyfaPrdckt4UWOFWdjTVKSaPoXJIBW3ghFO5xA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
   </div>
 </section>
 
@@ -185,23 +187,6 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
   </div>
   <div style="color:#c9a84c;font-size:16px;margin-bottom:6px">★★★★★</div>
   <p style="font-size:14px;color:#444;line-height:1.5;margin:0">Ho conosciuto l'avvocato Marco Mellone a Rio de Janeiro in 2015. Ha fatto la cittadinanza di molte persone della mia famiglia. Professionale, preciso. Persona fantastica.</p>
-  <div style="position:absolute;bottom:12px;right:12px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20" height="20" style="flex-shrink:0">
-<path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-<path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-<path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-<path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-<path fill="none" d="M0 0h48v48H0z"/></svg></div>
-</div><div class="rev-card">
-  <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px">
-    <img src="https://lh3.googleusercontent.com/a-/ALV-UjXijr3JdHBZYtppdnXqohS01dZc4sxn1Nox-QwGJ6S--qqSc0c=s128-c0x00000000-cc-rp-mo" style="width:40px;height:40px;border-radius:50%;object-fit:cover">
-    <div>
-      <div style="font-weight:600;font-size:14px;color:#1a2744">Beatrice Moccia</div>
-      <div style="font-size:12px;color:#666">2 anni fa</div>
-    </div>
-  </div>
-  <div style="color:#c9a84c;font-size:16px;margin-bottom:6px">★☆☆☆☆</div>
-  <p style="font-size:14px;color:#444;line-height:1.5;margin:0">Deludente.
-Un mese e mezzo che aspettiamo risposta, solo per sapere un preventivo. Scritte piú di dieci mail. Che pessima attenzione. Sconsiglio.</p>
   <div style="position:absolute;bottom:12px;right:12px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20" height="20" style="flex-shrink:0">
 <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
 <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
@@ -280,16 +265,19 @@ Un mese e mezzo che aspettiamo risposta, solo per sapere un preventivo. Scritte 
       <div class="contact-card"><div class="contact-icon">📞</div><div class="contact-label">Telefono</div><div class="contact-value"><a href="tel:+39 051 284 9370">+39 051 284 9370</a></div></div>
       <div class="contact-card"><div class="contact-icon">📍</div><div class="contact-label">Indirizzo</div><div class="contact-value">Viale Antonio Aldini,  28, 40136 Bologna</div></div>
       <div class="contact-card"><div class="contact-icon">🏛</div><div class="contact-label">Specializzazione</div><div class="contact-value">Studio legale</div></div>
+      <div class="contact-card" style="text-align:left">
+  <div class="contact-icon" style="text-align:center">🕐</div>
+  <div class="contact-label" style="text-align:center;margin-bottom:12px">Orari</div>
+  <table style="font-size:13px;width:100%"><tr><td style="padding:5px 16px 5px 0;">Lunedì</td><td style="color:rgba(255,255,255,0.8);">09–18</td></tr><tr><td style="padding:5px 16px 5px 0;font-weight:700;color:var(--gold)">Martedì</td><td style="color:#fff;font-weight:700;color:var(--gold)">09–18</td></tr><tr><td style="padding:5px 16px 5px 0;">Mercoledì</td><td style="color:rgba(255,255,255,0.8);">09–18</td></tr><tr><td style="padding:5px 16px 5px 0;">Giovedì</td><td style="color:rgba(255,255,255,0.8);">09–18</td></tr><tr><td style="padding:5px 16px 5px 0;">Venerdì</td><td style="color:rgba(255,255,255,0.8);">09–18</td></tr><tr><td style="padding:5px 16px 5px 0;">Sabato</td><td style="color:#e53e3e;">Chiuso</td></tr><tr><td style="padding:5px 16px 5px 0;">Domenica</td><td style="color:#e53e3e;">Chiuso</td></tr></table>
+</div>
     </div>
   </div>
 </section>
 
-<div class="banner">
-  <div class="container">
-    <h2>Vuoi un sito come questo per il tuo studio?</h2>
-    <p>Simplo crea siti web professionali in 24 ore per studi legali, notai e professionisti.</p>
-    <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" class="btn-primary">Scopri Simplo →</a>
-  </div>
+<div id="buy-banner">
+  <p class="dt">Ti piace questo sito? Il tuo potrebbe essere identico — online in 5 giorni per €99</p>
+  <p class="mob">Vuoi un sito così? €99</p>
+  <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" target="_blank" class="stripe">Inizia ora →</a>
 </div>
 
 <footer>
